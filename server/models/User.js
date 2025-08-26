@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-
     const userSchema = new mongoose.Schema(
     {
         _id: {type: String , required: true},
@@ -9,7 +8,7 @@ import mongoose from "mongoose";
         imageUrl: {type: String, required: true},
         enrolledCourses: [
             {
-            type: mongoose.Schema.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'Course'
             }
         ],
