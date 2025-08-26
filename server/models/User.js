@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const userSchema = new mongoose.Schema(
+    const userSchema = new mongoose.Schema(
     {
         _id: {type: String , required: true},
         name: {type: String, required: true},
@@ -9,11 +9,12 @@ const userSchema = new mongoose.Schema(
         imageUrl: {type: String, required: true},
         enrolledCourses: [
             {
-            type: mongoose.Schema.ObjectId.ObjectId,
+            type: mongoose.Schema.ObjectId,
             ref: 'Course'
             }
         ],
     }, {timestamps: true});
-    const User = mongoose.model('User', userSchema);
 
-    export default User
+const User = mongoose.model('User', userSchema);
+
+export default User
